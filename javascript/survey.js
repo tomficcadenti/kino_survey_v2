@@ -15,19 +15,19 @@ function maleClick() {
 
   let condition1 = document.getElementById('condition-1');
   condition1.setAttribute('onclick', 'maleCondition1Click()');
-  condition1.innerHTML = '<p>I have low levels of body fat, I can see my abs, and I want to build more muscle to look fantastic!</p>';
+  condition1.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4A.png'></img><p>I have low levels of body fat, I can see my abs, and I want to build more muscle to look fantastic!</p>";
 
   let condition2 = document.getElementById('condition-2');
   condition2.setAttribute('onclick', 'maleCondition2Click()');
-  condition2.innerHTML = "<p>I'm 'skinny fat' - I look skinny and definitely need more muscle but I still have fat covering my abs.</p>";
+  condition2.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4B.png'></img><p>I'm 'skinny fat' - I look skinny and definitely need more muscle but I still have fat covering my abs.</p>";
 
   let condition3 = document.getElementById('condition-3');
   condition3.setAttribute('onclick', 'maleConditions3Click()');
-  condition3.innerHTML = "<p>I have a good level of muscle size, but I need to drop fat to reveal muslce definition amd six pack abs.</p>";
+  condition3.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4C.png'></img><p>I have a good level of muscle size, but I need to drop fat to reveal muslce definition amd six pack abs.</p>";
 
   let condition4 = document.getElementById('condition-4');
   condition4.setAttribute('onclick', 'maleConditions4Click()');
-  condition4.innerHTML = "<p>I have no clue how much muscle I have with all this fat covering it, I need to lose a bunch of fat!</p>";
+  condition4.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4D.png'></img><p>I have no clue how much muscle I have with all this fat covering it, I need to lose a bunch of fat!</p>";
   condition4.style.display = 'default';
 
   genderizeButtons();
@@ -58,51 +58,19 @@ function femaleClick() {
 }
 
 function maleCondition1Click() {
-  let goal1 = document.getElementById('goal-1');
-  goal1.setAttribute('onClick', 'maleResult4AA()');
-  goal1.innerHTML = "<p>Do you want to focus on developing dense muscle size and lots of strength for the <b>GREEK GOD</b> Physique?</p><p>Think: hard, compact muscles with a good level of size & balanced proportions like Brad Pitt in Troy or Stephen Amell in Arrow.</p>"
-
-  let goal2 = document.getElementById('goal-2');
-  goal2.setAttribute('onClick', 'maleResult4AB()');
-  goal2.innerHTML = "<p>Do you want to focus on maximizing lean muscle growth for the <b>SUPERHERO PHYSIQUE</b>?</p><p>Think: big, full, well-developed muscles with great proportions like Henry Cavil in Superman or Chris Hemsworth in Thor.</p>"
-
-  openGoalPage();
+  maleResult4AA();
 }
 
 function maleCondition2Click() {
-  let goal1 = document.getElementById('goal-1');
-  goal1.setAttribute('onClick', 'maleResult4BA()');
-  goal1.innerHTML = "<p>My main goal is <b>DEFINITION</b>.</p><p>I want to focus mainly on fat loss to reveal great definition while I slowly build dense muscle size.</p>"
-
-  let goal2 = document.getElementById('goal-2');
-  goal2.setAttribute('onClick', 'maleResult4BB()');
-  goal2.innerHTML = "<p>My main goal is <b>MUSCLE GROWTH</b>.</p><p>I want to build muscle size while slowly dropping the fat covering my abs.</p>"
-
-  openGoalPage();
+  maleResult4AB();
 }
 
 function maleConditions3Click() {
-  let goal1 = document.getElementById('goal-1');
-  goal1.setAttribute('onClick', 'maleResult4CA()');
-  goal1.innerHTML = "<p>My main goal is to <b>DROP FAT</b> slowly.</p><p>About 1 pound per week while focusing on increasing muscle density and strength for a chiseled physique.</p>"
-
-  let goal2 = document.getElementById('goal-2');
-  goal2.setAttribute('onClick', 'maleResult4CB()');
-  goal2.innerHTML = "<p>My main goal is to do an <b>AGGRESSIVE CUT</b> and lose fat faster.</p><p>I'm not worried about getting more strength and size. I just want to get lean fast.</p>"
-
-  openGoalPage();
+  maleResult4BA();
 }
 
 function maleConditions4Click() {
-  let goal1 = document.getElementById('goal-1');
-  goal1.setAttribute('onClick', 'maleResult4DA()');
-  goal1.innerHTML = "<p>My main goal is to <b>DROP FAT</b> slowly.</p><p>About 1 pound per week while focusing on increasing muscle density and strength for a chiseled physique.</p>"
-
-  let goal2 = document.getElementById('goal-2');
-  goal2.setAttribute('onClick', 'maleResult4DB()');
-  goal2.innerHTML = "<p>My main goal is to do an <b>AGGRESSIVE CUT</b> and lose fat faster.</p><p>I'm not worried about getting more strength and size. I just want to get lean fast.</p>"
-
-  openGoalPage();
+  maleResult4BB();
 }
 
 function ageButtonClick() {
@@ -204,12 +172,6 @@ function conditionTabClick() {
   }
 }
 
-function goalTabClick() {
-  if (document.getElementById('goal-tab').classList.contains('active')) {
-    openGoalPage();
-  }
-}
-
 function openGenderPage() {
   deActivateAllTabs();
   activateNavTab(document.getElementById('gender-tab'));
@@ -285,5 +247,5 @@ function deActivateAllTabs() {
   deActivateNavTab(document.getElementById('gender-tab'));
   deActivateNavTab(document.getElementById('age-tab'));
   deActivateNavTab(document.getElementById('condition-tab'));
-  deActivateNavTab(document.getElementById('goal-tab'));
+  //deActivateNavTab(document.getElementById('goal-tab'));
 }
