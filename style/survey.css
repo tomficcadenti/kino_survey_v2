@@ -1,8 +1,13 @@
 /*------------------GENERAL STYLE RULES-----------------*/
 
-body {
+html, body {
   margin: 0;
   font-family: 'Lato';
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 /*------------------NAV BAR STYLING-----------------*/
