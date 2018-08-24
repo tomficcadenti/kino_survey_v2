@@ -15,19 +15,19 @@ function maleClick() {
 
   let condition1 = document.getElementById('condition-1');
   condition1.setAttribute('onclick', 'maleCondition1Click()');
-  condition1.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4A.png'></img><p>I have low levels of body fat, I can see my abs, and I want to build more muscle to look fantastic!</p>";
+  condition1.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4A.png'></img><p class='condition-buttons' style='border-radius: 8px; padding: 10px;'>I have low levels of body fat, I can see my abs, and I want to build more muscle to look fantastic!</p>";
 
   let condition2 = document.getElementById('condition-2');
   condition2.setAttribute('onclick', 'maleCondition2Click()');
-  condition2.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4B.png'></img><p>I'm 'skinny fat' - I look skinny and definitely need more muscle but I still have fat covering my abs.</p>";
+  condition2.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4B.png'></img><p class='condition-buttons' style='border-radius: 8px; padding: 10px;'>I'm 'skinny fat' - I look skinny and definitely need more muscle but I still have fat covering my abs.</p>";
 
   let condition3 = document.getElementById('condition-3');
   condition3.setAttribute('onclick', 'maleConditions3Click()');
-  condition3.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4C.png'></img><p>I have a good level of muscle size, but I need to drop fat to reveal muslce definition amd six pack abs.</p>";
+  condition3.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4C.png'></img><p class='condition-buttons' style='border-radius: 8px; padding: 10px;'>I have a good level of muscle size, but I need to drop fat to reveal muslce definition amd six pack abs.</p>";
 
   let condition4 = document.getElementById('condition-4');
   condition4.setAttribute('onclick', 'maleConditions4Click()');
-  condition4.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4D.png'></img><p>I have no clue how much muscle I have with all this fat covering it, I need to lose a bunch of fat!</p>";
+  condition4.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4D.png'></img><p class='condition-buttons' style='border-radius: 8px; padding: 10px;'>I have no clue how much muscle I have with all this fat covering it, I need to lose a bunch of fat!</p>";
   condition4.style.display = 'default';
 
   genderizeButtons();
@@ -62,15 +62,15 @@ function maleCondition1Click() {
 }
 
 function maleCondition2Click() {
-  maleResult4AB();
-}
-
-function maleConditions3Click() {
   maleResult4BA();
 }
 
+function maleConditions3Click() {
+  maleResult4CA();
+}
+
 function maleConditions4Click() {
-  maleResult4BB();
+  maleResult4DB();
 }
 
 function ageButtonClick() {

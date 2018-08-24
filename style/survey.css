@@ -8,6 +8,8 @@ body {
 /*------------------NAV BAR STYLING-----------------*/
 .nav-background {
   background-color: #313539;
+  border-top: solid 1px;
+  border-color: #ffffff;
 }
 
 .nav-bar {
@@ -30,6 +32,9 @@ body {
   padding: 8px 10px 8px 10px;
   text-decoration: none;
   font-size: 25px;
+  border-color: #ffffff;
+  border-left: solid 1px;
+  border-right: solid 1px;
 }
 
 .nav-item i {
@@ -49,10 +54,16 @@ body {
 .active {
   background-color: #ff7600;
   color: #313539;
+  border-color: #ffffff;
+  border-left: solid 1px;
+  border-right: solid 1px;
 }
 
 .off-color {
   background-color: rgb(27, 31, 35);
+  border-color: #ffffff;
+  border-left: solid 1px;
+  border-right: solid 1px;
 }
 
 .page-header {
@@ -134,6 +145,9 @@ body {
     padding: 7px 10px 6px 10px;
     text-decoration: none;
     font-size: 10px;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
   }
 
   .active {
@@ -219,8 +233,8 @@ body {
 
 /*------------------CONDITION PAGE STYLING-----------------*/
 
-.condition-buttons {
-  width: 240px;
+.condition_buttons {
+  width: 180px;
   float: none;
   display: inline-block;
   text-align: center;
@@ -228,6 +242,23 @@ body {
   border: 2px solid transparent;
   border-radius: 8px;
   color: #ffffff;
+  background-color: #d3d3d3;
+  margin: 20px;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.condition-li {
+  width: 260px;
+  float: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: #E8E8E8;
   margin: 20px;
   cursor: pointer;
   padding-left: 10px;
