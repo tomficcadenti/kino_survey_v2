@@ -28,7 +28,7 @@ html, body {
 
 .nav-item {
   /*width: 90px;*/
-  width: 210px;
+  width: 15%;
   float: none;
   display: inline-block;
   color: white;
