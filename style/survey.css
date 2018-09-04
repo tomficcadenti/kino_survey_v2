@@ -7,7 +7,7 @@ html, body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
+
 }
 
 /*------------------NAV BAR STYLING-----------------*/
@@ -28,7 +28,7 @@ html, body {
 
 .nav-item {
   /*width: 90px;*/
-  width: 15%;
+  width: 210px;
   float: none;
   display: inline-block;
   color: white;
@@ -88,12 +88,14 @@ html, body {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .nav-bar {
     list-style-type: none;
     margin: auto;
-    width: 610px;
+    align-items: center;
+    display: table;
     padding: 0;
     overflow: hidden;
     background-color: transparent;
@@ -142,18 +144,19 @@ html, body {
   }
 
   .nav-item {
-    width: 80px;
-    float: left;
+    width: 60px;
+    float: none;
+    display: inline-block;
     color: white;
     background-color: transparent;
     text-align: center;
-    padding: 7px 10px 6px 10px;
+    padding: 8px 10px 8px 10px;
     text-decoration: none;
     font-size: 10px;
     border-color: #ffffff;
-    border-width: 1px;
-    border-style: solid;
-  }
+    border-left: solid 1px;
+    border-right: solid 1px;
+}
 
   .active {
     background-color: #ff7600;
@@ -163,6 +166,21 @@ html, body {
   .off-color {
     background-color: rgb(27, 31, 35);
   }
+
+  .condition-li {
+    width: 30%;
+    float: none;
+    display: inline-block;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    margin: 20px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 }
 /*.fa.fa-venus-mars.fa-5x {
   font-size: 10px;
@@ -209,7 +227,12 @@ html, body {
 }
 
 .female-color:hover {
-  background-color: #bc93e2;
+  background-color: #bc93e2 !important;
+}
+
+.picture-contrast-color {
+  background-color: #E8E8E8;
+  color: #E8E8E8;
 }
 
 /*------------------AGE PAGE STYLING-----------------*/
@@ -239,15 +262,14 @@ html, body {
 /*------------------CONDITION PAGE STYLING-----------------*/
 
 .condition_buttons {
-  width: 180px;
+  width: 200px;
   float: none;
   display: inline-block;
   text-align: center;
-  font-size: 20px;
   border: 2px solid transparent;
+  font-size: 20px;
   border-radius: 8px;
-  color: #ffffff;
-  background-color: #d3d3d3;
+  background-color: #0000FF;
   margin: 20px;
   cursor: pointer;
   padding-left: 10px;
@@ -259,11 +281,26 @@ html, body {
   float: none;
   display: inline-block;
   text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  margin: 20px;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.condition-li-fem {
+  width: 260px;
+  float: none;
+  display: inline-block;
+  text-align: center;
   font-size: 20px;
   border: 2px solid transparent;
   border-radius: 8px;
   color: #ffffff;
-  background-color: #E8E8E8;
+  background-color: #8e2ee8;
   margin: 20px;
   cursor: pointer;
   padding-left: 10px;
@@ -281,6 +318,7 @@ html, body {
   border: 2px solid transparent;
   border-radius: 8px;
   color: #ffffff;
+  background-color: #8e2ee8;
   margin: 20px;
   cursor: pointer;
   padding-left: 10px;

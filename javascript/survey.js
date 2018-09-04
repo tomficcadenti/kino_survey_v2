@@ -15,20 +15,25 @@ function maleClick() {
 
   let condition1 = document.getElementById('condition-1');
   condition1.setAttribute('onclick', 'maleCondition1Click()');
-  condition1.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4A.png'></img><p class='condition-buttons' style='border-radius: 8px; padding: 10px;'>I have low levels of body fat, I can see my abs, and I want to build more muscle to look fantastic!</p>";
+  condition1.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4A.png'></img><p class='condition_buttons' style='border-radius: 8px; padding: 10px;'>I have low levels of body fat, I can see my abs, and I want to build more muscle to look fantastic!</p>";
 
   let condition2 = document.getElementById('condition-2');
   condition2.setAttribute('onclick', 'maleCondition2Click()');
-  condition2.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4B.png'></img><p class='condition-buttons' style='border-radius: 8px; padding: 10px;'>I'm 'skinny fat' - I look skinny and definitely need more muscle but I still have fat covering my abs.</p>";
+  condition2.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4B.png'></img><p class='condition_buttons' style='border-radius: 8px; padding: 10px;'>I'm 'skinny fat' - I look skinny and definitely need more muscle but I still have fat covering my abs.</p>";
 
   let condition3 = document.getElementById('condition-3');
   condition3.setAttribute('onclick', 'maleConditions3Click()');
-  condition3.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4C.png'></img><p class='condition-buttons' style='border-radius: 8px; padding: 10px;'>I have a good level of muscle size, but I need to drop fat to reveal muslce definition amd six pack abs.</p>";
+  condition3.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4C.png'></img><p class='condition_buttons' style='border-radius: 8px; padding: 10px;'>I have a good level of muscle size, but I need to drop fat to reveal muslce definition amd six pack abs.</p>";
 
   let condition4 = document.getElementById('condition-4');
   condition4.setAttribute('onclick', 'maleConditions4Click()');
-  condition4.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4D.png'></img><p class='condition-buttons' style='border-radius: 8px; padding: 10px;'>I have no clue how much muscle I have with all this fat covering it, I need to lose a bunch of fat!</p>";
-  condition4.style.display = 'default';
+  condition4.innerHTML = "<img style='width: 240px' src='https://1w2p5kxmuhf22mt443aqfe6s-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/4D.png'></img><p class='condition_buttons' style='border-radius: 8px; padding: 10px;'>I have no clue how much muscle I have with all this fat covering it, I need to lose a bunch of fat!</p>";
+  condition4.style.display = 'inline-block';
+
+  let conditionStyle = document.getElementsByClassName('condition-li');
+  for (i = 0; i < conditionStyle.length; i++) {
+    conditionStyle[i].classList.add("picture-contrast-color");
+  }
 
   genderizeButtons();
 }
@@ -46,11 +51,17 @@ function femaleClick() {
 
   let condition2 = document.getElementById('condition-2');
   condition2.setAttribute('onclick', 'femaleCondition2Click()');
-  condition2.innerHTML = "<p>I have <b>stubborn body fat</b></p><p>I want to slim down and increase my muscle tone.</p>";
+  condition2.innerHTML = "<p class='condition_buttons_fem'>I have <b>stubborn body fat</b></p><p>I want to slim down and increase my muscle tone.</p>";
 
   let condition3 = document.getElementById('condition-3');
   condition3.setAttribute('onclick', 'femaleCondition3Click()');
-  condition3.innerHTML = "<p>I have <b>20 or more pounds of fat</b> to lose - I want to drop all this fat and look my best.</p>";
+  condition3.innerHTML = "<p class='condition_buttons_fem'>I have <b>20 or more pounds of fat</b> to lose - I want to drop all this fat and look my best.</p>";
+
+  let conditionStyle = document.getElementsByClassName('condition-li');
+  for (i = 0; i < conditionStyle.length; i++) {
+    conditionStyle[i].classList.remove("picture-contrast-color");
+    conditionStyle[i].classList.add("female-color");
+  }
 
   document.getElementById('condition-4').style.display = 'none';
 
@@ -133,11 +144,11 @@ function genderizeButtons() {
     }
   }
 
-  let conditionButtons = document.getElementsByClassName('condition-buttons');
+  let conditionButtons = document.getElementsByClassName('condition_buttons');
   for (i = 0; i < conditionButtons.length; i++) {
     if (pageState.gender === MALE) {
       conditionButtons[i].classList.remove('female-color');
-      conditionButtons[i].classList.add('male-color');
+      conditionButtons[i].classList.add('picture-contrast-color');
     } else {
       conditionButtons[i].classList.remove('male-color');
       conditionButtons[i].classList.add('female-color');
@@ -198,6 +209,8 @@ function openConditionPage() {
   activateNavTab(document.getElementById('gender-tab'));
   activateNavTab(document.getElementById('age-tab'));
   activateNavTab(document.getElementById('condition-tab'));
+
+  genderizeButtons();
 
   document.getElementById(pageState.currentPage).style.display = 'none';
   document.getElementById('condition-page').style.display = 'block';
